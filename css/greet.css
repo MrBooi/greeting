@@ -1,215 +1,205 @@
- body{
-  margin: 0;
-  padding: 0;
+ body {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+ }
 
- width: 100%; 
-
-}
- header{
+ header {
    margin: 0;
    background-color: white;
  }
- header h1{
+
+ header h1 {
    margin-top: 0;
-  text-align: center;
-  font-size: 4rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: blue;
-  border-bottom: 2px solid orangered;
+   text-align: center;
+   font-size: 5rem;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   color: blue;
+   border-bottom: 2px solid orangered;
+ }
+
+ .pos {
+   padding-left: 8rem;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+ }
+
+ .pos label {
+   font-size: 3rem;
+   padding-right: 40px;
+   display: block;
+   margin-right: 20px;
+ }
+
+ .pos Span {
+   margin-left: 5rem;
+   font-size: 2rem;
+ }
+
+ .inputName {
+
+   padding: 12px 20px;
+   display: inline;
+   width: 50%;
+    height: 90px;
+   margin: 8px 0;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+ }
+
+ .lang {
+   padding-left: 5.5rem;
+   /* padding-top: 2rem; */
+   padding-bottom: 2.2rem;
+ }
+
+ .lang span {
+   display: block;
+   padding-left: 2rem;
+   font-size: 3rem;
+   padding-bottom: 2rem;
+ }
+
+ .lang label {
+   font-size: 2.4rem;
+   /* margin:5rem; */
+   padding-left: 4rem;
+ }
+
+input[type="radio"]{
+  width: 30px;
+  height: 20px;
 }
 
-.pos{
-padding-left: 8rem;
- padding-top: 2rem;
- padding-bottom: 2rem;
+ .display {
+   width: 80%;
+   margin: 0 auto;
+ }
+
+ .display label {
+   padding-left: 15rem;
+   font-size: 3rem;
+   color: orange;
+   display: block;
+   margin-bottom: 2rem;
+ }
+
+ .greetMe, .clear {
+   width: 30%;
+   background-color: #4CAF50;
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+ }
+
+ .clear {
+   float: right;
+   background-color: rgb(175, 76, 76);
+ }
+
+
+
+
+/* DeskTop */
+@media screen and (min-width:1000px) {
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  header {
+    margin: 0;
+    background-color: white;
+  }
+
+  header h1 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 4rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: blue;
+    border-bottom: 2px solid orangered;
+  }
+
+  .pos {
+    padding-left: 8rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .pos label {
+    font-size: 3rem;
+    padding-right: 40px;
+    display: block;
+    margin-right: 20px;
+  }
+
+  .pos Span {
+    margin-left: 5rem;
+    font-size: 2rem;
+  }
+
+  .inputName {
+
+    /* padding: 12px 20px; */
+    /* display: inline; */
+    width:40%;
+     height: 20%;
+    /* margin: 8px 0; */
+    /* border: 1px solid #ccc; */
+    /* border-radius: 4px; */
+    /* box-sizing: border-box; */
+  }
+
+  .lang {
+    padding-left: 5.5rem;
+    /* padding-top: 2rem; */
+    padding-bottom: 2.2rem;
+  }
+
+  .lang span {
+    display: block;
+    padding-left: 2rem;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .lang label {
+    font-size: 1.4rem;
+    /* margin:5rem; */
+    padding-left: 10rem;
+  }
+
+  .display {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .display label {
+    padding-left: 20rem;
+    font-size: 3rem;
+    color: orange;
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  .greetMe, .clear {
+    width: 30%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+  }
+
+  .clear {
+    float: none;
+    background-color: rgb(175, 76, 76);
+  }
 
 }
-
-.pos label{
-  font-size: 3rem;
-  padding-right: 40px;
-  display: block;
-margin-right: 20px;
-}
-.pos Span{
-  margin-left: 5rem;
-  font-size: 2rem;
-  
-}
-
- .inputName{
-  /* height: auto; */
-  padding: 12px 20px;
-  display:inline;
- width: 40%; 
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.lang{
-  padding-left: 5.5rem;
-  /* padding-top: 2rem; */
-   padding-bottom: 2.2rem; 
-
-}
-
-.lang span{
-  display: block;
-  padding-left: 2rem;
-  font-size: 2rem;
-  padding-bottom: 2rem;
-}
-
-
-.lang label{
-  font-size: 1.4rem;
-  /* margin:5rem; */
-  padding-left: 10rem;
-}
-
-.display {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.display label{
-  padding-left: 20rem;
-  font-size: 2rem;
-  color: orange;
-  display: block;
-  margin-bottom: 2rem;
-}
-
-.greetMe , .clear{
-  width: 30%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-cursor: pointer;
-}
-
-.clear{
-  background-color: rgb(175, 76, 76);
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-header{
-background-color: green;
-}
-
-header span{
-font: bold;
-font-size: 2em;
-font-family: sans-serif;
-line-height: 26px;
-color:white;
-margin: 20px;
-padding-top: 2px;
-
-}
-.panel{
-width: 50%;
-background-color: blue;
-margin: auto;
-padding-bottom: 2px;
-height: auto;
-}
-
-.enterName{
-  font-size: 1.5em;
-  font: bold;
-  color: white;
-  padding-left: 10px;
-  padding-right: 10px;
-}
- .panel .inputName{
-  width: 200px;
-  margin: 0;
-  padding-right: 4px;
-}
-
-.panel .counter{
-color: white;
-padding-left: 2px;
-
-}
-.langauges {
-margin-top: 5px;
-padding-top: 5px;
-padding-left: 80px;
-}
-.langauges span{
-
-  color: white;
-}
-
-
-.right-button{
-  padding-top: 10px;
-  margin-left: 20px;
-  padding-left: 140px;
-  padding-bottom: 40px;
-
-}
-.display span{
-  font-size: 1.5em;
-  font-family: sans-serif;
-  color: white;
-margin-left: 20px;
-
-}
-
-.display .displayName{
-font-size: 1.4em;
-font-family: cursive;
-color: pink;
-
-} */

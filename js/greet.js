@@ -3,7 +3,7 @@ var counterOfNameElement = document.querySelector('.counter');
 var greetMeBtn = document.querySelector('.GreetBtn');
 var displayNameElement = document.querySelector('.displayName');
 var greetLangaugeElement = document.querySelector('.greet');
-
+var clearBtn = document.querySelector('.clear');
 function namesGreetedLocalStorage(storedUsers) {
   var namesGreeted = {};
   var name = "";
@@ -14,6 +14,7 @@ function namesGreetedLocalStorage(storedUsers) {
       name = value;
     }
   }
+
   function setLang(value) {
     lang = value;
   }
@@ -22,12 +23,12 @@ function namesGreetedLocalStorage(storedUsers) {
     if (storedUsers) {
       namesGreeted = storedUsers;
     }
-    if(name !==""){
-    if (namesGreeted[name] === undefined) {
-      namesGreeted[name] = 0;
+    if (name !== "") {
+      if (namesGreeted[name] === undefined) {
+        namesGreeted[name] = 0;
+      }
     }
   }
-}
 
   function greet() {
     if (lang === "English") {
@@ -43,13 +44,17 @@ function namesGreetedLocalStorage(storedUsers) {
   function getName() {
     return name;
   }
+
   function getLang() {
     return lang;
   }
+
   function getNamesList() {
     return namesGreeted;
   }
-
+  function restNamesList(){
+    return namesGreeted ={};
+  }
   var CounterNames = function() {
     return Object.keys(namesGreeted).length;
   }
@@ -58,9 +63,12 @@ function namesGreetedLocalStorage(storedUsers) {
     names: setname,
     langauge: setLang,
     greeted: setGreeted,
+    getName: getName,
+    getLangaunge:getLang,
     message: greet,
     nameMap: getNamesList,
-    counter: CounterNames
+    counter: CounterNames,
+    rest   :restNamesList
   }
 }
 
@@ -78,10 +86,21 @@ function addBtn() {
   localStorage.setItem("Names", JSON.stringify(addToStorage.nameMap()));
   counterOfNameElement.innerHTML = addToStorage.counter();
   displayNameElement.innerHTML = addToStorage.message();
+  enteredName.value =" ";
+
 }
 
-greetMeBtn.addEventListener("click", addBtn);
+function clearClicked() {
+  localStorage.clear();
+    addToStorage.rest();
+  counterOfNameElement.innerHTML = 0;
+  displayNameElement.innerHTML = "Hello, Ayabonga";
+}
 
+
+
+greetMeBtn.addEventListener("click", addBtn);
+clearBtn.addEventListener("click",clearClicked);
 // function namesGreetedLocalStorage(storedUsers) {
 //   var namesGreeted = {};
 //   var name = "";
