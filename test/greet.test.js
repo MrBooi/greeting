@@ -32,14 +32,14 @@ describe('The greeting function', function() {
     assert.equal(addToStorage.message(), "Molo, Xola");
 
   });
-  it('should display "Hello, Andre" has a greet message if user entered Xola has a name and click on the radio button IsiXhosa ', function() {
+  it('should display "Hello, Andre" has a greet message if user entered Xola has a name and click on the radio button English ', function() {
     var addToStorage = NamesGreetedLocalStorage();
     addToStorage.names("Andre");
     addToStorage.langauge("English");
     assert.equal(addToStorage.message(), "Hello, Andre");
 
   });
-  it('should display "Hallo, Greg" has a greet message if user entered Xola has a name and click on the radio button IsiXhosa ', function() {
+  it('should display "Hallo, Greg" has a greet message if user entered Xola has a name and click on the radio button Afrikaans ', function() {
     var addToStorage = NamesGreetedLocalStorage();
     addToStorage.names("Greg");
     addToStorage.langauge("Afrikaans");
