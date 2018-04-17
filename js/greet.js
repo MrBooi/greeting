@@ -5,7 +5,7 @@ var displayNameElement = document.querySelector('.displayName');
 var greetLangaugeElement = document.querySelector('.greet');
 var clearBtn = document.querySelector('.clear');
 
-function namesGreetedLocalStorage(storedUsers) {
+function NamesGreetedLocalStorage(storedUsers) {
   var namesGreeted = {};
   var name = "";
   var lang = "";
@@ -76,7 +76,7 @@ function namesGreetedLocalStorage(storedUsers) {
 }
 
 var storedUsers = localStorage.getItem('Names') ? JSON.parse(localStorage.getItem('Names')) : {};
-var addToStorage = namesGreetedLocalStorage(storedUsers);
+var addToStorage = NamesGreetedLocalStorage(storedUsers);
 counterOfNameElement.innerHTML = Object.keys(storedUsers).length;
 
 function addBtn() {
