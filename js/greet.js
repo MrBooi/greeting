@@ -4,6 +4,7 @@ var greetMeBtn = document.querySelector('.GreetBtn');
 var displayNameElement = document.querySelector('.displayName');
 var greetLangaugeElement = document.querySelector('.greet');
 var clearBtn = document.querySelector('.clear');
+
 function namesGreetedLocalStorage(storedUsers) {
   var namesGreeted = {};
   var name = "";
@@ -52,10 +53,12 @@ function namesGreetedLocalStorage(storedUsers) {
   function getNamesList() {
     return namesGreeted;
   }
-  function restNamesList(){
-    return namesGreeted ={};
+
+  function restNamesList() {
+    return namesGreeted = {};
   }
-  var CounterNames = function() {
+
+  function CounterNames() {
     return Object.keys(namesGreeted).length;
   }
 
@@ -64,17 +67,17 @@ function namesGreetedLocalStorage(storedUsers) {
     langauge: setLang,
     greeted: setGreeted,
     getName: getName,
-    getLangaunge:getLang,
+    getLangaunge: getLang,
     message: greet,
     nameMap: getNamesList,
     counter: CounterNames,
-    rest   :restNamesList
+    reset: restNamesList
   }
 }
 
 var storedUsers = localStorage.getItem('Names') ? JSON.parse(localStorage.getItem('Names')) : {};
 var addToStorage = namesGreetedLocalStorage(storedUsers);
-
+counterOfNameElement.innerHTML = Object.keys(storedUsers).length;
 
 function addBtn() {
   var radioCheck = document.querySelector("input[name='langauge']:checked");
@@ -86,21 +89,35 @@ function addBtn() {
   localStorage.setItem("Names", JSON.stringify(addToStorage.nameMap()));
   counterOfNameElement.innerHTML = addToStorage.counter();
   displayNameElement.innerHTML = addToStorage.message();
-  enteredName.value =" ";
+  enteredName.value = "";
+  if (name == "") {
+    displayNameElement.innerHTML = "Enter name and choose langauge";
+    displayNameElement.classList.add("danger");
 
+  }
 }
 
 function clearClicked() {
   localStorage.clear();
-    addToStorage.rest();
-  counterOfNameElement.innerHTML = 0;
-  displayNameElement.innerHTML = "Hello, Ayabonga";
+  addToStorage.reset();
+  counterOfNameElement.innerHTML = addToStorage.counter();
+  displayNameElement.innerHTML = "Enter name and choose langauge";
+  console.log(localStorage.clear());
 }
 
 
 
 greetMeBtn.addEventListener("click", addBtn);
-clearBtn.addEventListener("click",clearClicked);
+clearBtn.addEventListener("click", clearClicked);
+
+
+
+
+
+
+
+
+
 // function namesGreetedLocalStorage(storedUsers) {
 //   var namesGreeted = {};
 //   var name = "";
