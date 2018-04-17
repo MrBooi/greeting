@@ -100,6 +100,7 @@ function addBtn() {
 function clearClicked() {
   localStorage.clear();
   addToStorage.reset();
+  window.location.reload();
   counterOfNameElement.innerHTML = addToStorage.counter();
   displayNameElement.innerHTML = "Enter name and choose langauge";
   console.log(localStorage.clear());

@@ -30,7 +30,7 @@
  }
 
  .pos label {
-   font-size: 1rem;
+   font-size: 1.2rem;
    padding-right: 20px;
    display: block;
    margin-right: 20px;
@@ -46,7 +46,7 @@
    padding: 12px 20px;
    display: inline;
    width: 220px;
-    height: 60px;
+    height: 40px;
    margin: 8px 0;
    border: 1px solid #ccc;
    border-radius: 4px;
@@ -153,7 +153,7 @@ input[type="radio"]{
     /* padding: 12px 20px; */
     /* display: inline; */
     width:40%;
-     height: 20%;
+     height: 10%;
     /* margin: 8px 0; */
     /* border: 1px solid #ccc; */
     /* border-radius: 4px; */
@@ -175,7 +175,7 @@ input[type="radio"]{
 
   .lang label {
     font-size: 1.4rem;
-    /* margin:5rem; */
+
     padding-left: 10rem;
   }
 
@@ -185,8 +185,8 @@ input[type="radio"]{
   }
 
   .display label {
-    padding-left: 20rem;
-    font-size: 1rem;
+    padding-left: 13rem;
+    font-size: 2rem;
     color: orange;
     display: block;
     margin-bottom: 2rem;
